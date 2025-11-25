@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cobweb } from '../icons.tsx';
+import { Cobweb } from '../icons';
 
 const PoemPage: React.FC = () => {
   return (
