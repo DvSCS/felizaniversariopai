@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Álbum de Aniversário Vintage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Raleway', sans-serif;
+      }
+      h1, h2, h3, .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .font-handwriting {
+        font-family: 'Caveat', cursive;
+      }
+      .page-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .page-content::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://www.transparenttextures.com/patterns/dust.png');
+        opacity: 0.25;
+        pointer-events: none;
+        z-index: 20;
+      }
+      .page-stain {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: rgba(171, 138, 95, 0.08);
+        border-radius: 50%;
+        filter: blur(30px);
+        z-index: 0;
+        pointer-events: none;
+      }
+      .torn-edges {
+        position: relative;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+      }
+      .torn-edges::before,
+      .torn-edges::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 15px;
+        background-size: 30px 15px;
+      }
+      .torn-edges::before {
+        top: -15px;
+        background-image:
+          radial-gradient(circle at 15px 0, transparent 15px, #4f402b 15px);
+      }
+      .torn-edges::after {
+        bottom: -15px;
+        background-image:
+          radial-gradient(circle at 15px 15px, #4f402b 15px, transparent 15px);
+      }
+      .aged-photo {
+        filter: sepia(0.7) contrast(0.85) brightness(0.9) saturate(0.7);
+        -webkit-filter: sepia(0.7) contrast(0.85) brightness(0.9) saturate(0.7);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#4f402b] bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

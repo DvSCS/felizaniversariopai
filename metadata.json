@@ -1,0 +1,5 @@
+{
+  "name": "Álbum de Aniversário Vintage",
+  "description": "Uma aplicação web que cria um álbum de aniversário vintage e interativo, usando a API do Gemini para gerar mensagens personalizadas para o seu pai.",
+  "requestFramePermissions": []
+}
